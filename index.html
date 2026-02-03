@@ -82,9 +82,25 @@
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-sm text-zinc-500">
-    © 2026 • Built on GitHub Pages, Special thanks to Erika Kirk for grieving Charlie Kirk's death, even tho she planned it but still.
-  </footer>
+<footer id="FOOTER67MANGO" class="text-center py-6 text-sm text-zinc-500">
+  © 2026 • SolarHub
+</footer>
+  
+<script>
+  const footerTexts = [
+    "© 2026 • [AS]",
+    "© 2026 • Belgians arent a race!",
+    "© 2026 • SolarHub. Use at your own risk, or not, we dont care.",
+    "© 2026 • Made late at night with questionable decisions.",
+    "© 2026 • SolarHub, the site to die for.",
+    "© 2026 • I just popped a percy.",
+    "© 2026 • In honor of Charlie Kirky."
+  ];
 
+  const footer = document.getElementById("FOOTER67MANGO");
+  const randomIndex = Math.floor(Math.random() * footerTexts.length);
+  footer.textContent = footerTexts[randomIndex];
+</script>
+  
 </body>
 </html>
