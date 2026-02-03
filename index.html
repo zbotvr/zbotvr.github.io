@@ -98,9 +98,22 @@
   ];
 
   const footer = document.getElementById("FOOTER67MANGO");
-  const randomIndex = Math.floor(Math.random() * footerTexts.length);
-  footer.textContent = footerTexts[randomIndex];
+  const chosenText = footerTexts[Math.floor(Math.random() * footerTexts.length)];
+
+  footer.textContent = chosenText;
+
+  // ONLY [AS] plays audio
+  if (chosenText === "© 2026 • [AS]") {
+    const audio = new Audio("audio/as.mp3");
+    audio.volume = 0.6;
+
+    // autoplay-safe
+    document.addEventListener("click", () => {
+      audio.play().catch(() => {});
+    }, { once: true });
+  }
 </script>
+
   
 </body>
 </html>
