@@ -102,12 +102,13 @@
 
   footer.textContent = chosenText;
 
-  // ONLY [AS] plays audio
+  // ONLY [AS] plays audio (50/50 chance between as.wav and as2.wav)
   if (chosenText === "© 2026 • [AS]") {
-    const audio = new Audio("audio/as.wav");
+    const audioFile = Math.random() < 0.5 ? "audio/as.wav" : "audio/as2.wav";
+    const audio = new Audio(audioFile);
     audio.volume = 0.6;
+    audio.load(); // preload
 
-    // autoplay-safe
     document.addEventListener("click", () => {
       audio.play().catch(() => {});
     }, { once: true });
