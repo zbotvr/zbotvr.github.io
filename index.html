@@ -1,120 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SolarHub</title>
-  <!-- Favicon -->
-  <link rel="icon" type="images/x-icon" href="favicon.ico">
-  <link rel="icon" type="images/png" href="favicon.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            neon: '#7c3aed'
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SolarHub - Renovation</title>
+<link rel="icon" type="images/x-icon" href="favicon.ico">
+<link rel="icon" type="images/png" href="favicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeUp 0.8s forwards;
+}
+</style>
 </head>
+
 <body class="bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 text-white min-h-screen">
 
-  <!-- Navbar -->
-  <nav class="flex items-center justify-between px-6 py-4 backdrop-blur bg-black/40 sticky top-0 z-50">
-    <h1 class="text-xl font-bold tracking-wide">🪐 Solarhub</h1>
-    <div class="space-x-6 text-sm">
-      <a href="" class="hover:text-neon transition">𝐇𝐨𝐦𝐞</a>
-      <a href="https://zbotvr.github.io/projects/" class="hover:text-neon transition">Projects</a>
-    </div>
-  </nav>
+<!-- Navbar -->
+<nav class="flex items-center justify-between px-6 py-4 backdrop-blur bg-black/40 sticky top-0 z-50">
+  <h1 class="text-xl font-bold tracking-wide">🪐 SolarHub</h1>
+  <div class="space-x-6 text-sm">
+    <a href="https://zbotvr.github.io/" class="hover:text-white/70 transition">Home</a>
+    <a href="#" class="text-white">Projects</a>
+  </div>
+</nav>
 
-  <!-- Hero -->
-  <section id="home" class="flex flex-col items-center justify-center text-center px-6 pt-32 pb-24">
-    <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-      Welcome to <span class="text-neon">Solarhub</span>
+<!-- Renovation Section -->
+<section class="flex items-center justify-center px-6 py-32 text-center">
+  <div class="fade-in max-w-2xl bg-white/5 p-12 rounded-3xl shadow-2xl backdrop-blur-lg">
+
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+      🚧 Site is being renovated
     </h2>
-    <p class="max-w-xl text-zinc-400 mb-8">
-      Free, easy to access "projects" to satisfy your needs.
+
+    <p class="text-zinc-400 text-lg mb-10">
+      Site is being renovated, click button below to go to projects and ignore this message.
     </p>
-    <div class="flex gap-4">
-      <a href="https://zbotvr.github.io/projects" class="px-6 py-3 rounded-xl bg-neon hover:opacity-80 transition font-semibold">
-        View All "Projects"
-      </a>
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="px-6 py-24 bg-black/40">
-    <h3 class="text-3xl font-bold mb-12 text-center">Featured "Projects"</h3>
+    <a href="projects.html"
+       class="inline-block bg-white text-black font-semibold px-8 py-4 rounded-2xl hover:scale-105 hover:bg-zinc-200 transition duration-300 shadow-lg">
+       Go to Projects
+    </a>
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+  </div>
+</section>
 
-      <!-- Project 1 -->
-      <a href="https://zbotvr.github.io/ddlcweb/" target="_blank" rel="noopener" class="block rounded-2xl bg-white/5 p-5 hover:-translate-y-1 hover:bg-white/10 transition">
-        <img src="images/ddlc.png" alt="Project One Screenshot" class="h-40 w-full object-cover rounded-xl mb-4 hover:scale-105 transition-transform">
-        <h4 class="font-semibold text-lg">Doki Doki Literature Club!</h4>
-        <p class="text-sm text-zinc-400">An ACTUAL dating sim! ....unless.</p>
-      </a>
-
-      <!-- Project 2 -->
-      <a href="https://zbotvr.github.io/classof09webport/" target="_blank" rel="noopener" class="block rounded-2xl bg-white/5 p-5 hover:-translate-y-1 hover:bg-white/10 transition">
-        <img src="images/classof09cover.png" alt="Project Two Screenshot" class="h-40 w-full object-cover rounded-xl mb-4 hover:scale-105 transition-transform">
-        <h4 class="font-semibold text-lg">Class of '09</h4>
-        <p class="text-sm text-zinc-400">The "rejection" simulator.</p>
-      </a>
-
-      <!-- Project 3 -->
-      <a href="https://zbotvr.github.io/Class-Of-09-The-Flip-Side/" target="_blank" rel="noopener" class="block rounded-2xl bg-white/5 p-5 hover:-translate-y-1 hover:bg-white/10 transition">
-        <img src="images/classof09coverflipside.jpg" alt="Project Three Screenshot" class="h-40 w-full object-cover rounded-xl mb-4 hover:scale-105 transition-transform">
-        <h4 class="font-semibold text-lg">Class of '09: The Flip Side</h4>
-        <p class="text-sm text-zinc-400">The "rejection" simulator, but you play as another character.</p>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-<footer id="FOOTER67MANGO" class="text-center py-6 text-sm text-zinc-500">
-  © 2026 • SolarHub
-</footer>
-  
-<script>
-  const footerTexts = [
-    "© 2026 • [AS]",
-    "© 2026 • Belgians arent a race!",
-    "© 2026 • SolarHub. Use at your own risk, or not, we dont care.",
-    "© 2026 • Made late at night with questionable decisions.",
-    "© 2026 • SolarHub, the site to die for.",
-    "© 2026 • I just popped a percy.",
-    "© 2026 • In honor of Charlie Kirky."
-  ];
-
-  const footer = document.getElementById("FOOTER67MANGO");
-  const chosenText = footerTexts[Math.floor(Math.random() * footerTexts.length)];
-
-  footer.textContent = chosenText;
-
-  // ONLY [AS] plays audio (50/50 chance between as.wav and as2.wav)
-  if (chosenText === "© 2026 • [AS]") {
-    const audioFile = Math.random() < 0.5 ? "audio/as.wav" : "audio/as2.wav";
-    const audio = new Audio(audioFile);
-    audio.volume = 0.6;
-    audio.load(); // preload
-
-    document.addEventListener("click", () => {
-      audio.play().catch(() => {});
-    }, { once: true });
-  }
-</script>
-
-  
 </body>
 </html>
